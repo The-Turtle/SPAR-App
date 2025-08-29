@@ -6,6 +6,7 @@ from transformers import (
     Trainer,
     pipeline,
 )
+import torch
 import os
 from matplotlib import pyplot as plt
 
@@ -37,6 +38,9 @@ class FineTunedModel:
         self.model = None
         self.train_losses = None
         self.eval_losses = None
+
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        print(f"Using device: {self.device}")
 
         self.load_tokenizer()
 
@@ -125,6 +129,9 @@ class FineTunedModel:
             logging_steps=1,
             logging_strategy="epoch",  # Log at the end of each epoch
             dataloader_pin_memory=False,  # needed if running on Apple Silicon Mac
+            fp16=torch.cuda.is_available(),  # Use mixed precision if CUDA available
+            dataloader_num_workers=0 if self.device.type == "cuda" else 4,
+
         )
         trainer = Trainer(
             model=model,
