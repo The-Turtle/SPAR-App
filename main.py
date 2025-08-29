@@ -3,7 +3,7 @@ from finetunedmodel import FineTunedModel
 
 if __name__ == "__main__":
     id = input(
-        "Which model would you like to load or train? The options are {harrypotter, joyce, shakespeare, trump}. "
+        "Which model would you like to load or train? The options are {harrypotter, joyce, shakespeare, trump}: "
     )
 
     model_name = "distilgpt2"
