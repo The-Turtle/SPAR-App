@@ -1,0 +1,9 @@
+# Core transformers and datasets
+transformers>=4.21.0
+datasets>=2.0.0
+
+# Training and model utilities
+torch>=1.12.0
+
+# Plotting
+matplotlib>=3.5.0
