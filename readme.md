@@ -61,7 +61,7 @@ With the exception of Finnegans Wake, all models showed convergence with decreas
 
 Sorting the models by their evaluation loss gives a rough estimate for the predictability of each dataset. Shakespeare's works are the most predictable, followed by the *Harry Potter series*, Trump's social media posts, and *Finnegans Wake*.
 
-### Sample Output
+## Sample Output
 
 Newlines were omitted and outputs were truncated at punctuation marks, if possible. The models were prompted with the following prompts: "The magic wand", "riverrun past", "To be or not to be", and "America is". Samples of the base model's responses are also given for comparison.
 
