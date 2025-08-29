@@ -224,7 +224,7 @@ class FineTunedModel:
         print(f"generator loaded from {self.model_path}")
 
     def generate_text(
-        self, prompt: str, *, max_new_tokens=50, temperature=1.0, top_p=0.8
+        self, prompt: str, *, max_new_tokens=100, temperature=1.0, top_p=0.8
     ) -> str:
         """Generates text using the loaded model. Must be called after
         loading the text generator."""
